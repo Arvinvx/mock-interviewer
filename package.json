@@ -1,0 +1,25 @@
+{
+  "name": "mock-interviewer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arvinvx/mock-interviewer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Arvinvx/mock-interviewer/issues"
+  },
+  "homepage": "https://github.com/Arvinvx/mock-interviewer#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
