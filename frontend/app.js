@@ -1,5 +1,5 @@
-const API_START = 'http://localhost:3000/start'
-const API_ANSWER = 'http://localhost:3000/answer'
+const API_START = '/start'
+const API_ANSWER = '/answer'
 
 const TOTAL_QUESTIONS = 5
 
