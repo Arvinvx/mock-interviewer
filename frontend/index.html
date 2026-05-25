@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mock Interviewer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="layout">
+
+    <div class="sidebar">
+      <div class="logo">mock<span>prep</span></div>
+      <div class="sidebar-meta" id="sidebar-meta">
+        <p class="meta-label">role</p>
+        <p class="meta-value" id="meta-role">—</p>
+        <p class="meta-label" style="margin-top:16px">progress</p>
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+        </div>
+        <p class="meta-value" id="meta-progress">0 / 5</p>
+      </div>
+      <button class="restart-btn" id="restart-btn" onclick="restart()" style="display:none">
+        <i class="ti ti-refresh" aria-hidden="true"></i> restart
+      </button>
+    </div>
+
+    <div class="main">
+
+      <div class="start-screen" id="start-screen">
+        <h1>AI mock interviewer</h1>
+        <p class="subtitle">Enter a role and get asked 5 real interview questions. Answers are scored with feedback.</p>
+        <div class="start-form">
+          <input type="text" id="job-input" placeholder="e.g. Backend Engineer at Stripe" />
+          <button class="primary-btn" onclick="startInterview()">
+            start interview <i class="ti ti-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="error-msg" id="start-error"></div>
+      </div>
+
+      <div class="chat-screen" id="chat-screen" style="display:none">
+        <div class="chat-log" id="chat-log"></div>
+        <div class="answer-area" id="answer-area">
+          <textarea id="answer-input" placeholder="Type your answer..." rows="4"></textarea>
+          <button class="primary-btn" id="send-btn" onclick="submitAnswer()">
+            submit <i class="ti ti-arrow-right" aria-hidden="true"></i>
+          </button>
+          <div class="error-msg" id="chat-error"></div>
+        </div>
+      </div>
+
+      <div class="results-screen" id="results-screen" style="display:none">
+        <div class="results-header">
+          <h2>Interview complete</h2>
+          <div class="score-badge" id="final-score-badge">—</div>
+        </div>
+        <div class="results-list" id="results-list"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
